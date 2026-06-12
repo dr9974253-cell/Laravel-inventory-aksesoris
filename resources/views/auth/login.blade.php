@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Inventory Aksesoris</title>
+    <title>Login - jwp Aksesoris</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -143,7 +143,7 @@
             <line x1="14" y1="16" x2="14" y2="20" stroke="#f5d97e" stroke-width="1" stroke-linecap="round"/>
             <line x1="12" y1="18" x2="16" y2="18" stroke="#f5d97e" stroke-width="1" stroke-linecap="round"/>
         </svg>
-        <h1>Inventory</h1>
+        <h1>jwp.Steel</h1>
         <p>Aksesoris</p>
     </div>
 
@@ -195,7 +195,7 @@
         });
     </script>
 
-    <p class="footer-text">&copy; {{ date('Y') }} Inventory Aksesoris</p>
+    <p class="footer-text">&copy; {{ date('Y') }} jwp.Steel Aksesoris</p>
 </div>
 </body>
 </html>

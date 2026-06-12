@@ -193,6 +193,7 @@ export default function Dashboard({
                                         <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">Nama Produk</th>
                                         <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">Kategori</th>
                                         <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">Stok</th>
+                                        <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">Status</th>
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-gray-200 bg-white">
@@ -206,11 +207,20 @@ export default function Dashboard({
                                                 <td className="whitespace-nowrap px-4 py-3 text-sm">
                                                     <span className="inline-flex rounded-full bg-green-100 px-2 py-1 text-xs font-medium text-green-700">{product.stok}</span>
                                                 </td>
+                                                <td className="whitespace-nowrap px-4 py-3 text-sm">
+                                                    {product.stok > 5 ? (
+                                                        <span className="inline-flex rounded-full bg-green-100 px-2 py-1 text-xs font-medium text-green-700">Tersedia</span>
+                                                    ) : product.stok > 0 ? (
+                                                        <span className="inline-flex rounded-full bg-yellow-100 px-2 py-1 text-xs font-medium text-yellow-700">Warning</span>
+                                                    ) : (
+                                                        <span className="inline-flex rounded-full bg-red-100 px-2 py-1 text-xs font-medium text-red-700">Habis</span>
+                                                    )}
+                                                </td>
                                             </tr>
                                         ))
                                     ) : (
                                         <tr>
-                                            <td colSpan="3" className="whitespace-nowrap px-4 py-4 text-center text-sm text-gray-500">Tidak ada data</td>
+                                            <td colSpan="4" className="whitespace-nowrap px-4 py-4 text-center text-sm text-gray-500">Tidak ada data</td>
                                         </tr>
                                     )}
                                 </tbody>
@@ -230,6 +240,7 @@ export default function Dashboard({
                                         <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">Nama Produk</th>
                                         <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">Kategori</th>
                                         <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">Stok</th>
+                                        <th className="px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">Status</th>
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-gray-200 bg-white">
@@ -243,11 +254,20 @@ export default function Dashboard({
                                                 <td className="whitespace-nowrap px-4 py-3 text-sm">
                                                     <span className="inline-flex rounded-full bg-red-100 px-2 py-1 text-xs font-medium text-red-700">{product.stok}</span>
                                                 </td>
+                                                <td className="whitespace-nowrap px-4 py-3 text-sm">
+                                                    {product.stok > 5 ? (
+                                                        <span className="inline-flex rounded-full bg-green-100 px-2 py-1 text-xs font-medium text-green-700">Tersedia</span>
+                                                    ) : product.stok > 0 ? (
+                                                        <span className="inline-flex rounded-full bg-yellow-100 px-2 py-1 text-xs font-medium text-yellow-700">Warning</span>
+                                                    ) : (
+                                                        <span className="inline-flex rounded-full bg-red-100 px-2 py-1 text-xs font-medium text-red-700">Habis</span>
+                                                    )}
+                                                </td>
                                             </tr>
                                         ))
                                     ) : (
                                         <tr>
-                                            <td colSpan="3" className="whitespace-nowrap px-4 py-4 text-center text-sm text-gray-500">Tidak ada produk dengan stok rendah</td>
+                                            <td colSpan="4" className="whitespace-nowrap px-4 py-4 text-center text-sm text-gray-500">Tidak ada produk dengan stok rendah</td>
                                         </tr>
                                     )}
                                 </tbody>

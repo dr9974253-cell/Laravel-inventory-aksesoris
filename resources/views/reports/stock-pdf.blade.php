@@ -287,7 +287,7 @@
             <div class="summary-value">{{ number_format($totalKeluar) }}</div>
         </div>
         <div class="summary-card blue">
-            <div class="summary-label">Saldo</div>
+            <div class="summary-label">Selisih</div>
             <div class="summary-value">{{ number_format($saldo) }}</div>
         </div>
         <div class="summary-card gray">
